@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator using javascript</title>
+    <link rel="stylesheet" href="stylecalc.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="Calculatorbox">
+            <div class="card-heder">Love Calculator</div>
+            <div class="card-body">
+                <form class="form-inline">
+                    <div class="form-grou">
+                        <input type="text" placeholder="Your name" id="yourname">
+                    </div>
+                    <div>+ </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your love name" id="lovename">
+                    </div>
+                </form>
+
+                <div class="button" onclick="checkloveper()">
+                    <button>click here</button>
+                </div>
+                <div>
+                    <input type="text" name="" id="lovedata" placeholder="lovepercentage">
+
+                </div>
+            </div>
+            <div class="card-footer">God Bless Youh.....</div>
+
+        </div>
+    </div>
+
+    <script>
+
+
+        function checkloveper() {
+            var yourname = document.getElementById('yourname').value;
+            var lovename = document.getElementById('lovename').value;
+
+            if (yourname == "") {
+                alert('please enter your name');
+            }
+
+            else if (yourname.length <= 2) {
+                alert('minimun length is 3')
+            }
+
+            else if (!isNaN(yourname)) {
+                alert('numbers are not allowd');
+            }
+
+            else if (lovename == "") {
+                alert('please enter your name');
+            }
+
+            else if (lovename.length <= 2) {
+                alert('minimun length is 3')
+            }
+
+            else if (!isNaN(lovename)) {
+                alert('numbers are not allowd');
+            }
+
+            else {
+                lovedata = Math.random() * 100;
+                lovedataa = Math.floor(lovedata);
+                document.getElementById('lovedata').value = lovedataa + "%";
+            }
+        }
+    </script>
+</body>
+
+</html>
